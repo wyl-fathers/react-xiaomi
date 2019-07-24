@@ -1,0 +1,18 @@
+.aaa {
+  div {
+    position: fixed;
+    bottom: 0.8rem;
+    right: 0.3rem;
+    z-index: 5;
+  }
+  span {
+    display: block;
+    height: 0.5rem;
+    width: 0.5rem;
+    text-align: center;
+    line-height: 0.5rem;
+    font-size: 0.3rem;
+    border-radius: 0.25rem;
+    background: rgba(242, 242, 242, 0.3);
+  }
+}

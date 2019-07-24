@@ -1,0 +1,25 @@
+.swiper {
+  background: #f2f2f2;
+
+  ul {
+    overflow-x: scroll;
+    width: 90%;
+    height: 0.3rem;
+    white-space: nowrap;
+    li {
+      font-size: 0.155rem;
+      display: inline-block;
+      height: 0.3rem;
+      padding: 0 0.13rem;
+      line-height: 0.3rem;
+      text-align: center;
+      //   width: 1rem;
+      //   width: 0.7rem;
+    }
+  }
+}
+.swiper {
+  ul::-webkit-scrollbar {
+    display: none;
+  }
+}
