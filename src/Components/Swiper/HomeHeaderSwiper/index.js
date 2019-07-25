@@ -16,7 +16,7 @@ class HomeHeadSwiper extends Component {
         )
     }
     changeComp(data) {
-        console.log(data)
+        // console.log(data)
         store.dispatch({
             type: 'changecurrent',
             payload: data

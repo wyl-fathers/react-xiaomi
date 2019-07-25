@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Route, Switch } from 'react-router-dom'
+import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import App from '../App'
 import Home from '../Views/Home'
 import Cart from '../Views/Cart'
@@ -12,6 +12,7 @@ const router = <Router>
             <Route path='/category' component={Category} exact></Route>
             <Route path='/cart' component={Cart} exact></Route>
             <Route path='/user' component={User} exact></Route>
+            <Redirect from="/" to="/home" />
         </Switch>
     </App>
 </Router>

@@ -30,14 +30,9 @@ class Carousel extends Component {
                         }
                     </ReactSwipe> : null
                 }
-                {/* <button onClick={() => reactSwipeEl.next()}>Next</button>
-                <button onClick={() => reactSwipeEl.prev()}>Previous</button> */}
             </div >
         );
 
-    }
-    componentDidMount() {
-        // console.log(this.props)
     }
 
 }

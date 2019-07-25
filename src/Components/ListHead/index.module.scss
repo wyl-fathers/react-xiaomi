@@ -1,0 +1,27 @@
+.ListHead {
+  height: 0.5rem;
+  width: 100%;
+  background: #f2f2f2;
+}
+
+.box {
+  display: flex;
+  height: 0.5rem;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
+  .one,
+  .three {
+    height: 0.5rem;
+    width: 0.5rem;
+    text-align: center;
+    line-height: 0.5rem;
+  }
+}
+
+.two {
+  font-size: 0.19rem;
+  width: 2.7rem;
+  text-align: center;
+}
