@@ -1,0 +1,61 @@
+.CateIndex {
+  position: fixed;
+  top: 0.5rem;
+  right: 0;
+  width: 2.8122rem;
+  height: 5.65rem;
+  padding-right: 0.16667rem;
+  overflow: scroll;
+}
+
+.box {
+}
+
+:global(.cells_auto_fill:nth-of-type(1)) {
+  img {
+    height: 1.0416rem;
+    width: 100%;
+  }
+}
+:global(.cells_auto_fill) {
+  img {
+    height: 0.42rem;
+    width: 100%;
+  }
+}
+
+:global(.category_name) {
+  width: 100%;
+  height: 0.6666rem;
+  padding-top: 0.1rem;
+  text-align: center;
+  line-height: 0.6666rem;
+  font-weight: normal;
+  font-size: 0.2rem;
+}
+
+// .item.category_name {
+//   width: 100%;
+//   height: 0.6666rem;
+//   padding-top: 0.1rem;
+// }
+:global(.category_group) {
+  display: flex;
+  flex-wrap: wrap;
+  > div {
+    width: 33.33%;
+    padding: 0.1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      height: 0.52rem;
+    }
+    p {
+      padding-top: 0.15rem;
+      display: inline;
+      white-space: nowrap;
+      font-size: 0.11rem;
+    }
+  }
+}

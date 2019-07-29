@@ -22,23 +22,20 @@ class Carousel extends Component {
                         ref={el => (reactSwipeEl = el)}
                     >
                         {
-                            this.props.swiperList.map((item) => {
-                                return <div key={item.ad_position_id}>
-                                    <img src={item.img_url} alt={item.ad_position_id} />
+                            this.props.swiperList.map((item,index) => {
+                                return <div key={'zxczxczxc'+index}>
+                                    <img src={item.img_url} alt={item.ad_position_id} key={'lzc_swiper'+index}/>
                                 </div>
                             })
                         }
                     </ReactSwipe> : null
                 }
-                {/* <button onClick={() => reactSwipeEl.next()}>Next</button>
-                <button onClick={() => reactSwipeEl.prev()}>Previous</button> */}
             </div >
         );
 
     }
-    componentDidMount() {
-        // console.log(this.props)
-    }
+
+
 
 }
 

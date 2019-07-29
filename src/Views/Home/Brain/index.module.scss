@@ -1,0 +1,203 @@
+.Brain {
+  overflow: hidden;
+}
+
+:global(.cells_auto_fill_Brain_1),
+:global(.cells_auto_fill_Brain_2) {
+  display: flex;
+  flex-wrap: wrap;
+  > div {
+    width: 20%;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+:global(.divider_line_Brain_3),
+:global(.divider_line_Brain_5),
+:global(.divider_line_Brain_11),
+:global(.divider_line_Brain_13),
+:global(.divider_line_Brain_15),
+:global(.divider_line_Brain_21),
+:global(.divider_line_Brain_23),
+:global(.divider_line_Brain_25),
+:global(.divider_line_Brain_27),
+:global(.divider_line_Brain_29),
+:global(.divider_line_Brain_31),
+:global(.divider_line_Brain_33),
+:global(.divider_line_Brain_35),
+:global(.divider_line_Brain_37),
+:global(.divider_line_Brain_39),
+:global(.divider_line_Brain_45),
+:global(.divider_line_Brain_47),
+:global(.divider_line_Brain_43),
+:global(.divider_line_Brain_41),
+:global(.divider_line_Brain_49),
+:global(.divider_line_Brain_51),
+:global(.divider_line_Brain_53),
+:global(.divider_line_Brain_55),
+:global(.divider_line_Brain_63),
+:global(.divider_line_Brain_67),
+:global(.divider_line_Brain_65),
+:global(.divider_line_Brain_71),
+:global(.divider_line_Brain_69),
+:global(.divider_line_Brain_75),
+:global(.divider_line_Brain_77),
+:global(.divider_line_Brain_79),
+:global(.divider_line_Brain_81),
+:global(.divider_line_Brain_83),
+:global(.divider_line_Brain_85) {
+  height: 0.03rem;
+  border-bottom: 0.1rem solid rgb(250, 250, 250);
+  background-color: rgb(250, 250, 250);
+}
+
+:global(.list_three_type4_Brain_6),
+:global(.list_three_type4_Brain_7),
+:global(.list_three_type4_Brain_8),
+:global(.list_three_type4_Brain_16),
+:global(.list_three_type4_Brain_17),
+:global(.list_three_type4_Brain_18),
+:global(.list_three_type4_Brain_24),
+:global(.list_three_type4_Brain_26),
+:global(.list_three_type4_Brain_28),
+:global(.list_three_type4_Brain_32),
+:global(.list_three_type4_Brain_34),
+:global(.list_three_type4_Brain_36),
+:global(.list_three_type4_Brain_40),
+:global(.list_three_type4_Brain_42),
+:global(.list_three_type4_Brain_44),
+:global(.list_three_type4_Brain_48),
+:global(.list_three_type4_Brain_50),
+:global(.list_three_type4_Brain_52),
+:global(.list_three_type4_Brain_56),
+:global(.list_three_type4_Brain_58),
+:global(.list_three_type4_Brain_60),
+:global(.list_three_type4_Brain_64),
+:global(.list_three_type4_Brain_66),
+:global(.list_three_type4_Brain_68),
+:global(.list_three_type4_Brain_72),
+:global(.list_three_type4_Brain_74),
+:global(.list_three_type4_Brain_76),
+:global(.list_three_type4_Brain_80),
+:global(.list_three_type4_Brain_82),
+:global(.list_three_type4_Brain_84),
+:global(.list_three_type4_Brain_87),
+:global(.list_three_type4_Brain_89),
+:global(.list_three_type4_Brain_91) {
+  height: 2.233rem;
+  display: flex;
+  padding: 0 1%;
+  > div {
+    padding: 0 1%;
+    width: 33.33%;
+    height: 2.233rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      height: 1.1538rem;
+      width: 100%;
+    }
+    > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      height: 1.0747rem;
+      width: 100%;
+      padding: 0.1rem 0rem;
+      p {
+        text-align: center;
+        width: 1.0416rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      p:nth-of-type(1) {
+        font-size: 0.16rem;
+      }
+      p:nth-of-type(2) {
+        margin-top: 0.03215rem;
+        font-size: 0.12rem;
+        text-overflow: ellipsis;
+        width: 1.0416rem;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      p:nth-of-type(3) {
+        color: red;
+        font-size: 0.12rem;
+
+        span:nth-of-type(1) {
+          color: red;
+          font-weight: bold;
+          font-size: 0.17rem;
+        }
+        span:nth-of-type(2) {
+          color: #999;
+        }
+      }
+      button {
+        height: 0.3rem;
+        width: 1rem;
+        margin: 0 auto;
+        color: white;
+        background: #ea625b;
+        border: 0;
+        font-size: 0.14rem;
+      }
+    }
+  }
+}
+
+:global(.cells_auto_fill_Brain_4),
+:global(.cells_auto_fill_Brain_14) {
+  height: 0.5833rem;
+  width: 100%;
+  img {
+    height: 0.5833rem;
+    width: 100%;
+  }
+}
+
+:global(.cells_auto_fill_Brain_10),
+:global(.cells_auto_fill_Brain_20) {
+  height: 0.4478rem;
+  width: 100;
+  border-top: 0.01rem solid #ccc;
+  img {
+    height: 0.4478rem;
+    width: 100;
+  }
+}
+:global(.cells_auto_fill_Brain_12) {
+  height: 1.0416rem;
+  width: 100%;
+  img {
+    height: 1.0416rem;
+    width: 100%;
+  }
+}
+
+:global(.cells_auto_fill_Brain_22),
+:global(.cells_auto_fill_Brain_30),
+:global(.cells_auto_fill_Brain_38),
+:global(.cells_auto_fill_Brain_46),
+:global(.cells_auto_fill_Brain_54),
+:global(.cells_auto_fill_Brain_62),
+:global(.cells_auto_fill_Brain_70),
+:global(.cells_auto_fill_Brain_78),
+:global(.cells_auto_fill_Brain_86) {
+  height: 0.4166rem;
+  width: 100%;
+  img {
+    height: 0.4166rem;
+    width: 100%;
+  }
+}
+
+:global(.list_three_type4_Brain_91) {
+  margin-bottom: 0.5rem;
+}

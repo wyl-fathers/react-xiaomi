@@ -1,0 +1,28 @@
+.CateList {
+  height: 5.65rem;
+  width: 0.7916rem;
+  border-right: 0.01rem solid #ddd;
+
+  ul {
+    height: 5.65rem;
+    width: 0.9378rem;
+    padding: 0.10417rem 0.15625rem 0.10417rem 0;
+    overflow: scroll;
+    li {
+      display: inline-block;
+      height: 0.46875rem;
+      width: 0.78156rem;
+      text-align: center;
+      line-height: 0.46875rem;
+      font-size: 0.13rem;
+    }
+  }
+  ul::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+:global(.lzc_cur) {
+  color: #ff6700;
+  font-size: 0.18rem !important;
+}
