@@ -1,0 +1,56 @@
+.pic1 {
+  height: 0.62rem;
+  width: 100%;
+  img {
+    background-size: 100%;
+    height: 0.62rem;
+    width: 100%;
+  }
+}
+
+.cnxhlist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  li {
+    box-sizing: border-box;
+    padding: 1% 0;
+    width: 49%;
+    height: 2.54rem;
+
+    h3 {
+      text-indent: 0.15rem;
+      font-size: 0.15rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      margin: 0.05rem 0;
+      font-weight: 400;
+    }
+
+    img {
+      width: 1.8563rem;
+      height: 1.8563rem;
+      box-sizing: border-box;
+    }
+  }
+}
+
+.goods {
+  width: 100%;
+  height: 0.41rem;
+  span {
+    margin-left: 0.05rem;
+    color: #777777;
+    font-size: 0.13rem;
+    text-decoration: line-through;
+  }
+}
+
+.price {
+  text-indent: 0.14rem;
+  font-size: 0.18rem;
+  color: #ff6700;
+}
