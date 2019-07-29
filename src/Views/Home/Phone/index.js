@@ -14,7 +14,7 @@ class Phone extends Component {
                 <Swiper {...this.state}></Swiper>
                 {
                     this.state.dataList ? this.state.dataList.map((item, index) => {
-                        return <div className={item.view_type + '_' + index} key={'father' + index}>
+                        return <div className={item.view_type + '_ELE_' + index} key={'father' + index}>
                             {item.body.items ? item.body.items.map((el, index) => {
                                 return <div key={index + 'father_inmg'}>
                                     <img src={el.img_url} alt={el.ad_position_id} key={el.img_url + 'img'} />
@@ -54,7 +54,7 @@ class Phone extends Component {
             </div>
         )
     }
-    componentWillMount() {
+    componentDidMount() {
         axios({
             method: 'post',
             url: '/v1/home/page',
@@ -62,9 +62,10 @@ class Phone extends Component {
         }).then((resp) => {
             this.setState({
                 swiperList: resp.data.data.data.sections[0].body.items,
-                dataList: resp.data.data.data.sections
+                dataList: resp.data.data.data.sections.filter((item, index) => {
+                    return index > 0
+                })
             })
-            console.log(resp.data.data.data.sections)
         })
     }
 }

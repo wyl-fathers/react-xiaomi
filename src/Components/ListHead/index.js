@@ -8,14 +8,15 @@ class ListHead extends Component {
             <div className={css.ListHead}>
                 <div className={css.box}>
                     <div className={css.one}>
-                        <GoBack></GoBack>
+                        <GoBack {...this.props}>
+                        </GoBack>
                     </div>
                     <div className={css.two}>{this.props.children}</div>
                     <div className={css.three}>
                         <Search></Search>
                     </div>
                 </div>
-            </div>
+            </div >
         )
     }
 }
