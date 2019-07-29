@@ -1,9 +1,12 @@
-:global(.react-swipe-container){
-    height: 3.75rem !important;
+.sqm{
+    // height: 3.75rem !important;
     background: #f5f5f5;
+    img{
+      height: 100%;
+    }
 }
 .root{
-    height: 3.75rem;
+    // height: 3.75rem;
 }
 .section {
     margin: 0.2rem 0 0 .16rem;
@@ -80,7 +83,7 @@
       width: .36rem;
       margin: .1rem 0 0 .26rem;
     }
-    a{
+    p{
       margin-left: .80844rem;
       margin-top: .1rem;
       width: 1.2295rem;

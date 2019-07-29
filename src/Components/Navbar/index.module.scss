@@ -1,20 +1,58 @@
+// .Navbar {
+//   position: fixed;
+//   left: 0;
+//   bottom: 0;
+//   width: 100%;
+//   height: 0.52rem;
+//   background: white;
+//   ul {
+//     display: flex;
+//     width: 100%;
+//     height: 0.52rem;
+//     li {
+//       flex: 1;
+//       justify-content: center;
+//       align-items: center;
+//       display: flex;
+//       flex-direction: column;
+//     }
+//   }
+// }
+
 .Navbar {
-  position: fixed;
-  left: 0;
-  bottom: 0;
+  height: 50px;
   width: 100%;
-  height: 0.52rem;
   background: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   ul {
-    display: flex;
+    height: 50px;
     width: 100%;
-    height: 0.52rem;
+    display: flex;
+    justify-content: space-between;
     li {
-      flex: 1;
-      justify-content: center;
-      align-items: center;
+      height: 50px;
+      width: 25%;
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      a {
+        color: black;
+        display: flex;
+        flex-direction: column;
+        // color: #f60;
+        justify-content: center;
+        align-items: center;
+        span {
+          font-size: 0.2rem;
+        }
+      }
     }
   }
+}
+
+.active1 {
+  color: #ff6700 !important;
 }

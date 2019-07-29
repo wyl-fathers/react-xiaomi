@@ -29,3 +29,9 @@
 .box {
   position: relative;
 }
+
+:global(.true) {
+  position: fixed;
+  top: 0;
+  left: 0;
+}

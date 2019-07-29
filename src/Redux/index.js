@@ -2,7 +2,7 @@ import { createStore } from 'redux'
 
 const reducers = (prevstate = {
     isNavbaShow: true,
-    current: 0
+    current: 4
 }, action) => {
     let { type, payload } = action
     switch (type) {

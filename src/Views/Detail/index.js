@@ -14,13 +14,13 @@ class Detail extends Component{
     detailSwiperList:[],
     relatedList:[],
     goodsName:null,
-    id:null,
+    id:10000151,
   }
   render(){
     return(
       <div>
           <div className={css.root}> 
-           {this.state.swiperList?<Swiper {...this.state}></Swiper>:null}
+           {this.state.swiperList?<Swiper {...this.state} className={css.sqm}></Swiper>:null}
           </div>
           <div>
             <h1 style={{fontWeight:'normal',textIndent:'.1rem',color:'#3c3c3c'}}>{this.state.productName}</h1>
@@ -96,7 +96,7 @@ class Detail extends Component{
               <span className="iconfont">&#xe657;</span><br/>
               <span onClick={this.handleCart}>购物车</span>
             </div>
-            <a href onClick={this.handleAddCart}>加入购物车</a>
+            <p  onClick={this.handleAddCart}>加入购物车</p>
         </div>
 
       </div>) 
@@ -112,10 +112,10 @@ handleAddCart = () => {
   this.props.history.push({
     pathName:'/cart',
     state:{
-      // id:this.state.id,
-      // name:this.state.productName,
-      // price:this.state.marketPrice,
-      // img:this.state.swiperList[1].img_url
+      id:this.state.id,
+      name:this.state.productName,
+      price:this.state.marketPrice,
+      img:this.state.swiperList[1].img_url
     }
   })
 }

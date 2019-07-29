@@ -14,10 +14,10 @@ class Activies extends Component{
             <div className={css.sell}>
               <span style={{position:'absolute',marginTop:'.15rem',color:'#999'}}>促销</span>
                 {
-                    this.state.dataList.map(item =>
-            <div key="index" onClick={this.handleClick} className={css.pad}>
-             <span className={css.type}>{item.type_desc}</span>
-             <span className={css.title}>{item.title}<span className="iconfont" style={{float:'right',}}>&#xe683;</span></span>
+                    this.state.dataList.map((item,index )=>
+            <div key={'sqm_1_1'+index} onClick={this.handleClick} className={css.pad}>
+             <span className={css.type} key={'sqm_1_span'+'index'}>{item.type_desc}</span>
+             <span className={css.title} key={'sqm_1_span_1'+'index'}>{item.title}<span className="iconfont" style={{float:'right',}} key={'sqm_1_span_2'+'index'}>&#xe683;</span></span>
             </div>                        
                         )
                 }
@@ -32,9 +32,9 @@ class Activies extends Component{
              </div>
              {
                  this.state.dataList.map((item,index) =>
-             <div key={index+'div'} className={css.con}>
-               <span key={index+'span1'} className={css.popupType}>{item.type_desc}</span>
-               <span key={index+'span2'} className={css.popupTitle}>{item.title}</span>
+             <div key={index+'div_sqm'} className={css.con}>
+               <span key={index+'span1_sqm'} className={css.popupType}>{item.type_desc}</span>
+               <span key={index+'span2_sqm'} className={css.popupTitle}>{item.title}</span>
              </div>
                  )
              }

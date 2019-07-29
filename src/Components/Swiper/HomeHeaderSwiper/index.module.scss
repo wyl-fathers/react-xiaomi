@@ -23,3 +23,7 @@
     display: none;
   }
 }
+
+:global(.cur) {
+  color: #ff6700;
+}
