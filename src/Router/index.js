@@ -5,6 +5,7 @@ import Home from '../Views/Home'
 import Cart from '../Views/Cart'
 import Category from '../Views/Category'
 import User from '../Views/User'
+import Detail from '../Views/Detail'
 const router = <Router>
     <App>
         <Switch>
@@ -12,6 +13,7 @@ const router = <Router>
             <Route path='/category' component={Category} exact></Route>
             <Route path='/cart' component={Cart} exact></Route>
             <Route path='/user' component={User} exact></Route>
+            <Route path='/detail:id' component={Detail} exact></Route>
         </Switch>
     </App>
 </Router>
