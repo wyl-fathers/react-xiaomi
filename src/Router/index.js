@@ -5,6 +5,12 @@ import Home from '../Views/Home'
 import Cart from '../Views/Cart'
 import Category from '../Views/Category'
 import User from '../Views/User'
+import Login from '../Views/User/Login'
+import Maplocation from '../Views/User/Maplocation'
+import Mpointsmall from '../Views/User/Mpointsmall'
+import Pass from '../Views/User/Pass'
+import Services from '../Views/User/Services'
+
 const router = <Router>
     <App>
         <Switch>
@@ -12,6 +18,11 @@ const router = <Router>
             <Route path='/category' component={Category} exact></Route>
             <Route path='/cart' component={Cart} exact></Route>
             <Route path='/user' component={User} exact></Route>
+            <Route path='/Login' component={Login} exact></Route>
+            <Route path='/Maplocation' component={Maplocation} exact></Route>
+            <Route path='/Mpointsmall' component={Mpointsmall} exact></Route>
+            <Route path='/Pass' component={Pass} exact></Route>
+            <Route path='/Services' component={Services} exact></Route>
         </Switch>
     </App>
 </Router>
