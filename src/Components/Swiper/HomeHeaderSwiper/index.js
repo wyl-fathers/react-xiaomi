@@ -5,6 +5,7 @@ class HomeHeadSwiper extends Component {
     state = {
         current: store.getState().current
     }
+    ccc = null
     render() {
         return (
             <div className={css.swiper}>
@@ -29,11 +30,15 @@ class HomeHeadSwiper extends Component {
     }
 
     componentWillMount() {
-        store.subscribe(() => {
+        this.ccc = store.subscribe(() => {
             this.setState({
                 current: store.getState().current
             })
         })
+    }
+
+    componentWillUnmount() {
+        this.ccc()
     }
 
 }

@@ -29,7 +29,7 @@ class Category extends Component {
                 }
 
                 {
-                    this.state.categoryIndex ? <CateLIndex list={this.state.categoryIndex} listName={this.state.data1} ></CateLIndex> : null
+                    this.state.categoryIndex ? <CateLIndex list={this.state.categoryIndex} listName={this.state.data1} {...this.props} ></CateLIndex> : null
                 }
 
 

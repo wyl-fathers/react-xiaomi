@@ -22,7 +22,13 @@ class MibbleComputer extends Component {
                     this.state.dataList ? this.state.dataList.map((item, index) => {
                         return <div className={item.view_type + '_MibbleCompuyer_' + index} key={'father' + index}>
                             {item.body.items ? item.body.items.map((el, index) => {
-                                return <div key={index + 'father_inmg'}>
+                                return <div key={index + 'father_inmg'} onClick={() => {
+                                    if (el.product_id) {
+                                        this.props.history.push(`/detail${el.product_id}`)
+                                    } else {
+                                        alert('商品已售空')
+                                    }
+                                }}>
                                     <img src={el.img_url} alt={el.ad_position_id} key={el.img_url + 'img'} />
                                     <div key={el.img_url + 'father_P'}>
                                         {

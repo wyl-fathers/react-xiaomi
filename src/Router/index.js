@@ -27,12 +27,13 @@ const router = <Router>
             <Route path='/user' component={User} exact></Route>
             <Route path='/detail:id' component={Detail} exact></Route>
             <Route path='/ss' component={SS} exact></Route>
+            <Route path='/login' component={Login} exact></Route>
+            <Route path='/maplocation' component={Maplocation} exact></Route>
+            <Route path='/mpointsmall' component={Mpointsmall} exact></Route>
+            <Route path='/pass' component={Pass} exact></Route>
+            <Route path='/services' component={Services} exact></Route>
             <Redirect from="/" to="/home" />
-            <Route path='/Login' component={Login} exact></Route>
-            <Route path='/Maplocation' component={Maplocation} exact></Route>
-            <Route path='/Mpointsmall' component={Mpointsmall} exact></Route>
-            <Route path='/Pass' component={Pass} exact></Route>
-            <Route path='/Services' component={Services} exact></Route>
+
         </Switch>
     </App>
 </Router>

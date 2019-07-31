@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import GoBack from '../../Components/GoBack'
 import css from './index.module.scss'
-
+import CNXH from '../../Components/Cnxh'
+import store from '../../Redux'
 class SearchPage extends Component {
     state = {
         searchName: null,
@@ -73,7 +74,14 @@ class SearchPage extends Component {
                     this.state.dataList ? this.state.dataList.map((item, index) => {
                         return <div key={'ss_shop2_father' + index}>
                             {
-                                item.view_type !== "view_recommend_class" ? <div key={'ss_shop_1' + index} className="div_father">
+                                item.view_type !== "view_recommend_class" ? <div key={'ss_shop_1' + index} className="div_father" onClick={() => {
+                                    if (item.body.product_id) {
+
+                                        this.props.history.push(`/detail${item.body.product_id}`)
+                                    } else {
+                                        alert('商品已售空')
+                                    }
+                                }}>
                                     <div key={'ss_shop1' + index} className='img_father'>
                                         {
                                             item.body.image ? <img src={item.body.image} alt="" key={'ss_shop2_img' + index} /> : <img src={item.body.img_url} alt="" key={'ss_shop2_img' + index} />
@@ -110,14 +118,17 @@ class SearchPage extends Component {
 
 
 
-
+                <CNXH></CNXH>
             </div>
         )
     }
 
 
     componentWillMount() {
-        console.log(this.props)
+        store.dispatch({
+            type: 'HideNabar',
+            payload: false
+        })
         axios({
             method: 'post',
             url: "/v1/hisearch/query_v3",
@@ -141,6 +152,15 @@ class SearchPage extends Component {
                 dataList: resp.data.data.list_v2
             })
         })
+    }
+
+
+    componentWillUnmount() {
+        store.dispatch({
+            type: 'ShowNabar',
+            payload: true
+        })
+
     }
 
 

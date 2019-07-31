@@ -1,102 +1,113 @@
-.sqm{
-    // height: 3.75rem !important;
-    background: #f5f5f5;
-    img{
-      height: 100%;
-    }
+.sqm {
+  // height: 3.75rem !important;
+  background: #f5f5f5;
+  img {
+    height: 100%;
+  }
 }
-.root{
-    // height: 3.75rem;
+.root {
+  // height: 3.75rem;
 }
 .section {
-    margin: 0.2rem 0 0 .16rem;
-    width: 3.4185rem;
-    height: 1.1548rem;
-    background: #e5e5e5;
-    border-radius: .1rem;
-    border-top: 1px solid #ccc;
+  margin: 0.2rem 0 0 0.16rem;
+  width: 3.4185rem;
+  height: 1.1548rem;
+  background: #e5e5e5;
+  border-radius: 0.1rem;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  .info {
+    height: 0.3849rem;
+    line-height: 0.3849rem;
+    width: 100%;
+    text-indent: 0.2rem;
+    font-size: 0.14rem;
     border-bottom: 1px solid #ccc;
-    .info{
-      height: .3849rem;
-      line-height: .3849rem;
-      width: 100%;
-      text-indent: .2rem;
-      font-size: .14rem;
-      border-bottom: 1px solid #ccc;
-      .checked{
-        color: #999;
-        margin-right: .1rem;
-      }
-    }
-   .adds{
-      height: .3849rem;
-      line-height: .3849rem;
-      width: 100%;
-      text-indent: .2rem;
-      font-size: .14rem;
-      border-bottom: 1px solid #ccc;
-      .destination{
-        color: #999;
-        margin-right: .1rem;
-      }
-      .have{
-        color:#ff6700;
-      }
-    }
-      .serive{
-      height: .3849rem;
-      line-height: .3849rem;
-      width: 100%;
-      text-indent: .2rem;
-      font-size: .14rem;
-      img{
-          display: inline;
-          width: .1012rem;
-          height: .1012rem;
-      }
-      span{
-        color: #999;
-        margin:0 .1rem 0 .03rem;
-        font-size: .1rem;
-      }
+    .checked {
+      color: #999;
+      margin-right: 0.1rem;
     }
   }
-  .float{
-    width: 3.5853rem;
-    height: .6253rem;
-    position: fixed;
-    z-index: 999;
-    left: .09rem;
-    bottom: .1rem;
-    display: flex;
-    background: rgba(255,255,255,0.96);
-    border-radius: .1rem;
-    text-align: center;
-    font-size: .12rem;
-    .home{
-      height: 100%;
-      width: .27rem;
-      margin: .1rem 0 0 .26rem;
+  .adds {
+    height: 0.3849rem;
+    line-height: 0.3849rem;
+    width: 100%;
+    text-indent: 0.2rem;
+    font-size: 0.14rem;
+    border-bottom: 1px solid #ccc;
+    .destination {
+      color: #999;
+      margin-right: 0.1rem;
     }
-    .cart{
-      height: 100%;
-      width: .36rem;
-      margin: .1rem 0 0 .26rem;
-    }
-    p{
-      margin-left: .80844rem;
-      margin-top: .1rem;
-      width: 1.2295rem;
-      height: .3335rem;
-      line-height: .3335rem;
-      background: #ff6700;
-      border-radius:1.2295rem;
-      font-size: .14rem;
-      text-decoration: none;
-      color: #fff;
-      box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 
-                     0 4px 5px rgba(0,0,0,.14),
-                    0 1px 10px rgba(0,0,0,.12);
+    .have {
+      color: #ff6700;
     }
   }
-  
+  .serive {
+    height: 0.3849rem;
+    line-height: 0.3849rem;
+    width: 100%;
+    text-indent: 0.2rem;
+    font-size: 0.14rem;
+    img {
+      display: inline;
+      width: 0.1012rem;
+      height: 0.1012rem;
+    }
+    span {
+      color: #999;
+      margin: 0 0.1rem 0 0.03rem;
+      font-size: 0.1rem;
+    }
+  }
+}
+.float {
+  width: 3.5853rem;
+  height: 0.6253rem;
+  position: fixed;
+  z-index: 999;
+  left: 0.09rem;
+  bottom: 0.1rem;
+  display: flex;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 0.1rem;
+  text-align: center;
+  font-size: 0.12rem;
+  .home {
+    height: 100%;
+    width: 0.27rem;
+    margin: 0.1rem 0 0 0.26rem;
+  }
+  .cart {
+    height: 100%;
+    width: 0.36rem;
+    margin: 0.1rem 0 0 0.26rem;
+  }
+  p {
+    margin-left: 0.80844rem;
+    margin-top: 0.1rem;
+    width: 1.2295rem;
+    height: 0.3335rem;
+    line-height: 0.3335rem;
+    background: #ff6700;
+    border-radius: 1.2295rem;
+    font-size: 0.14rem;
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px rgba(0, 0, 0, 0.14), 0 1px 10px rgba(0, 0, 0, 0.12);
+  }
+}
+
+:global(.detail_goback) {
+  position: fixed;
+  top: 0.3rem;
+  left: 0.3rem;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.4);
+  font-size: 0.3rem;
+  border-radius: 50%;
+  color: #fff;
+  // text-align: center;
+  height: 0.3rem;
+  width: 0.31rem;
+}

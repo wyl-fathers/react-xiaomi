@@ -21,7 +21,14 @@ class CateIndex extends Component {
                                         return <div className={el.view_type} key={'c' + index}>
                                             {
                                                 el.body.items ? el.body.items.map((data) => {
-                                                    return <div key={'cc' + data.product_name + index}>
+                                                    return <div key={'cc' + data.product_name + index} onClick={() => {
+                                                        if (data.action.path) {
+
+                                                            this.props.history.push(`/detail${data.action.path}`)
+                                                        } else {
+                                                            alert('商品已售完！')
+                                                        }
+                                                    }}>
 
                                                         {
                                                             data.img_url ? <img src={data.img_url} alt={data.img_url} key={data.img_url} /> : null

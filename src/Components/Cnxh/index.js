@@ -33,21 +33,23 @@ class Cnxh extends Component {
                 <ul className={css.cnxhlist}>
                     {
                         this.state.datalist.map(item =>
-                            <li key={item.action.path}>
-                                <img src={item.image_url}/>
-                                <h3 key={'name'+item.action.path}>{item.name}</h3>
+                            <li key={item.action.path} onClick={() => {
+                                this.props.history.push(`/detail${item.action.path}`)
+                            }}>
+                                <img src={item.image_url} />
+                                <h3 key={'name' + item.action.path}>{item.name}</h3>
                                 <div className={css.goods}>
                                     <div className={css.price}>￥{item.price}
-                                    {
-                                        item.price!==item.market_price?<span >{item.market_price}</span>:
-                                        null
-                                    }
+                                        {
+                                            item.price !== item.market_price ? <span >{item.market_price}</span> :
+                                                null
+                                        }
                                     </div>
                                 </div>
                             </li>
                         )
-                    }                
-                
+                    }
+
                 </ul>
 
 
@@ -56,7 +58,7 @@ class Cnxh extends Component {
 
     }
 
-    
+
 
 }
 

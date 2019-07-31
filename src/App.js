@@ -7,17 +7,20 @@ import React, { Component } from 'react';
 // import Category from './Views/Category'
 import Navbar from './Components/Navbar'
 import Go2Top from './Components/Go2Top'
-// import store from './Redux'
+import store from './Redux'
 import './App.css';
 
 class App extends Component {
   state = {
-    // current: store.getState().current
+    show: store.getState().isNavbaShow
   }
   render() {
     return (
       <div>
-        <Navbar></Navbar>
+        {this.state.show ?
+          <Navbar></Navbar>
+          : null
+        }
         <Go2Top></Go2Top>
         {
           this.props.children
@@ -26,15 +29,13 @@ class App extends Component {
     );
   }
 
-  // componentWillMount() {
-  //   store.subscribe(() => {
-  //     this.setState({
-  //       current: store.getState().current
-  //     }, () => {
-  //       console.log(store.getState().current)
-  //     })
-  //   })
-  // }
+  componentWillMount() {
+    store.subscribe(() => {
+      this.setState({
+        show: store.getState().isNavbaShow
+      })
+    })
+  }
 
 
 

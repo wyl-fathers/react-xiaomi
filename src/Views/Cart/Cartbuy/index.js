@@ -1,47 +1,29 @@
 import React, { Component } from 'react'
 import css from './index.module.scss'
-
+import store from '../../../Redux'
+import ListHead from '../../../Components/ListHead'
 class Cartbuy extends Component {
+
+
     state = {
         sj: [],
         sum: 0,
-        datalist: [
-            {
-                id: 1,
-                name: '小米22222',
-                price: 1000,
-                img: './img/jia.jpg',
-                number: 1
-            },
-
-            {
-                id: 2,
-                name: '小米22222',
-                price: 1000,
-                img: './img/jia.jpg',
-                number: 1
-
-            },
-
-            {
-                id: 3,
-                name: '小米22222',
-                price: 1000,
-                img: './img/jia.jpg',
-                number: 1
-
-            }
-        ]
+        datalist: store.getState().shopList
 
     }
+
+    ccc = null
 
     render() {
         return (
             <div className={css.wyl}>
+                <ListHead {...this.props}>
+                    购物车
+                </ListHead>
                 <ul className={css.all}>
                     {
 
-                        this.state.datalist.map((item, index) =>
+                        this.state.datalist ? this.state.datalist.map((item, index) =>
                             <li key={item.id}>
                                 <div className={css.choose}><div className={(this.state.sj.indexOf(index) > -1) ? "sj_yuan iconfont" + ' ' + 'sj_check' : "sj_yuan iconfont"} onClick={() => {
                                     if (this.state.sj.indexOf(index) > -1) {
@@ -68,28 +50,35 @@ class Cartbuy extends Component {
                                             var wyl = [...this.state.datalist]
                                             wyl[index].number--
                                             this.setState({
-                                                datalist:wyl
-                                            },()=>{
-                                                if (wyl[index].number <=1) {
-                                                    wyl[index].number=1
+                                                datalist: wyl
+                                            }, () => {
+                                                if (wyl[index].number <= 1) {
+                                                    wyl[index].number = 1
                                                     this.setState({
-                                                        datalist:wyl
+                                                        datalist: wyl
                                                     })
-                                                  }
+                                                }
                                             })
-                                            } } >-</div>
+                                        }} >-</div>
                                         <div className={css.n}>{item.number}</div>
                                         <div className={css.add} onClick={() => {
                                             var zxc = [...this.state.datalist]
                                             zxc[index].number++
                                             this.setState({
-                                                datalist:zxc
+                                                datalist: zxc
                                             })
-                                            }  }>+</div>
-                                        <div className="sj_delall iconfont"  >&#xe663;</div>
+                                        }}>+</div>
+                                        <div onClick={
+                                            () => {
+                                                store.dispatch({
+                                                    type: "delShop",
+                                                    payload: item.id
+                                                })
+                                            }
+                                        } className="sj_delall iconfont"  >&#xe663;</div>
                                     </div>
                                 </div>
-                            </li>)
+                            </li>) : null
                     }
                 </ul>
 
@@ -103,6 +92,7 @@ class Cartbuy extends Component {
                         this.props.history.push('/home')
                     }}>继续购物</div>
                     <div className={css.getsum} onClick={() => {
+                        alert('不想卖你！！！')
                         this.props.history.push('/home')
                     }}>去结算</div>
                 </div>
@@ -121,7 +111,7 @@ class Cartbuy extends Component {
         let sum = 0;
 
         var sj_list = [];
-       this.state.sj.forEach(el => {
+        this.state.sj.forEach(el => {
             sj_list.push(this.state.datalist[el]);
         });
 
@@ -134,6 +124,16 @@ class Cartbuy extends Component {
 
     }
 
+    componentWillMount() {
+        this.ccc = store.subscribe(() => {
+            this.setState({
+                datalist: store.getState().shopList
+            })
+        })
+    }
+    componentWillUnmount() {
+        this.ccc()
+    }
 
 
 }

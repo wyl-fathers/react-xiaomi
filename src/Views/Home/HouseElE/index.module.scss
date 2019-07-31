@@ -1,2 +1,187 @@
 .HouseELE {
+  overflow: hidden;
+}
+:global(.cells_auto_fill_House_ELE_0) {
+  display: flex;
+  flex-wrap: wrap;
+  > div {
+    width: 20%;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+:global(.divider_line_House_ELE_1),
+:global(.divider_line_House_ELE_6),
+:global(.divider_line_House_ELE_11),
+:global(.divider_line_House_ELE_16),
+:global(.divider_line_House_ELE_21),
+:global(.divider_line_House_ELE_29),
+:global(.divider_line_House_ELE_33),
+:global(.divider_line_House_ELE_37),
+:global(.divider_line_House_ELE_45) {
+  height: 0.03rem;
+  border-bottom: 0.08rem solid rgb(245, 245, 245);
+  background-color: rgb(245, 245, 245);
+}
+
+:global(.cells_auto_fill_House_ELE_2),
+:global(.cells_auto_fill_House_ELE_7),
+:global(.cells_auto_fill_House_ELE_12),
+:global(.cells_auto_fill_House_ELE_17),
+:global(.cells_auto_fill_House_ELE_22),
+:global(.cells_auto_fill_House_ELE_30),
+:global(.cells_auto_fill_House_ELE_34),
+:global(.cells_auto_fill_House_ELE_38) {
+  height: 0.4166rem;
+  width: 100%;
+  img {
+    height: 0.4166rem;
+    width: 100%;
+  }
+}
+
+:global(.list_two_type1_House_ELE_3),
+:global(.list_two_type1_House_ELE_4),
+:global(.list_two_type1_House_ELE_5),
+:global(.list_two_type1_House_ELE_8),
+:global(.list_two_type1_House_ELE_9),
+:global(.list_two_type1_House_ELE_10),
+:global(.list_two_type1_House_ELE_13),
+:global(.list_two_type1_House_ELE_14),
+:global(.list_two_type1_House_ELE_15),
+:global(.list_two_type1_House_ELE_18),
+:global(.list_two_type1_House_ELE_19),
+:global(.list_two_type1_House_ELE_20),
+:global(.list_two_type1_House_ELE_24),
+:global(.list_two_type1_House_ELE_25),
+:global(.list_two_type1_House_ELE_26),
+:global(.list_two_type1_House_ELE_27),
+:global(.list_two_type1_House_ELE_28),
+:global(.list_two_type1_House_ELE_31),
+:global(.list_two_type1_House_ELE_32),
+:global(.list_two_type1_House_ELE_36),
+:global(.list_two_type1_House_ELE_35),
+:global(.list_two_type1_House_ELE_40),
+:global(.list_two_type1_House_ELE_41),
+:global(.list_two_type1_House_ELE_42),
+:global(.list_two_type1_House_ELE_43),
+:global(.list_two_type1_House_ELE_44) {
+  height: 2.533rem;
+  display: flex;
+  padding: 0 1%;
+  > div {
+    padding: 0 1%;
+    width: 50%;
+    height: 2.533rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      height: 1.4538rem;
+      width: 100%;
+    }
+    > div {
+      display: flex;
+      flex-direction: column;
+      height: 1.0747rem;
+      width: 1.7813rem;
+      padding: 0.1rem 0.14rem;
+      p {
+        text-align: center;
+      }
+      p:nth-of-type(1) {
+        font-size: 0.16rem;
+        width: 1.5rem;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      p:nth-of-type(2) {
+        margin-top: 0.03215rem;
+        font-size: 0.09rem;
+      }
+      p:nth-of-type(3) {
+        color: red;
+
+        span:nth-of-type(1) {
+          color: red;
+        }
+        span:nth-of-type(2) {
+          color: #999;
+        }
+      }
+      button {
+        height: 0.3rem;
+        width: 1rem;
+        margin: 0 auto;
+        color: white;
+        background: #ea625b;
+        border: 0;
+      }
+    }
+  }
+}
+
+:global(.list_one_type12_House_ELE_23),
+:global(.list_one_type12_House_ELE_39) {
+  height: 2.533rem;
+  display: flex;
+  padding: 0 1%;
+  > div {
+    padding: 0 1%;
+    width: 100%;
+    height: 2.533rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      height: 1.4538rem;
+      width: 100%;
+    }
+    > div {
+      display: flex;
+      flex-direction: column;
+      height: 1.0747rem;
+      width: 1.7813rem;
+      padding: 0.1rem 0.14rem;
+      p {
+        text-align: center;
+      }
+      p:nth-of-type(1) {
+        font-size: 0.16rem;
+        width: 1.5rem;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      p:nth-of-type(2) {
+        margin-top: 0.03215rem;
+        font-size: 0.09rem;
+      }
+      p:nth-of-type(3) {
+        color: red;
+
+        span:nth-of-type(1) {
+          color: red;
+        }
+        span:nth-of-type(2) {
+          color: #999;
+        }
+      }
+      button {
+        height: 0.3rem;
+        width: 1rem;
+        margin: 0 auto;
+        color: white;
+        background: #ea625b;
+        border: 0;
+      }
+    }
+  }
+}
+
+:global(.divider_line_House_ELE_45) {
+  margin-bottom: 0.5rem;
 }

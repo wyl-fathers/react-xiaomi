@@ -24,32 +24,33 @@ class Home extends Component {
             <div>
                 <HomeHeader {...this.state} {...this.props} />
                 {
-                    this.chooseComponent()
+                    this.chooseComponent({ ...this.props })
                 }
             </div>
         )
     }
 
-    chooseComponent() {
+    chooseComponent(data) {
         switch (this.state.current) {
             case 0:
-                return <Recommend />
+                return <Recommend {...data} />
             case 1:
-                return <Phone />
+                return <Phone {...data} />
             case 2:
-                return <Brain />
+                return <Brain {...data} />
             case 3:
-                return <TV />
+                return <TV {...data} />
             case 4:
-                return <MibbleComputer />
+                return <MibbleComputer {...data} />
             case 5:
-                return <HouseElE />
+                return <HouseElE {...data} />
             case 6:
-                return <Live />
+                return <Live {...data} />
 
         }
     }
     componentWillMount() {
+        console.log(this.props)
         axios({
             method: 'post',
             url: '/v1/home/page',

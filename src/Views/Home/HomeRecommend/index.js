@@ -17,7 +17,15 @@ class Home extends Component {
                     this.state.dataList ? this.state.dataList.map((item, index) => {
                         return <div className={item.view_type + '_' + index} key={'father' + index}>
                             {item.body.items ? item.body.items.map((el, index) => {
-                                return <div key={el.img_url + 'father_img'}>
+                                return <div key={el.img_url + 'father_img'} onClick={() => {
+                                    console.log(el, item)
+                                    if (el.product_id) {
+                                        this.props.history.push(`/detail${el.product_id}`)
+                                    } else {
+                                        alert('商品已售空' + '请往下点.....')
+                                        // el.ad_position_id && this.props.history.push(`/detail${el.ad_position_id}`)
+                                    }
+                                }}>
                                     <img src={el.img_url} alt={el.ad_position_id} key={el.img_url + 'img'} />
                                     <div key={el.img_url + 'father_P'}>
                                         {
